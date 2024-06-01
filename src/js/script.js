@@ -1,9 +1,9 @@
 // Declaração de variaveis
-
 let images = ["./src/assets/img1.jpg", "./src/assets/img2.jpg", "./src/assets/img3.jpg"];
 let index = 0;
 let time = 3000;
 
+// Funções
 function slideShow() {
     const carousel = document.getElementById("carrosel");
     const dots = document.getElementsByClassName("dot");
@@ -47,4 +47,5 @@ function showSlide(n) {
     dots[n].className += " active";
 }
 
+// Main
 slideShow();

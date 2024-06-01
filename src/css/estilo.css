@@ -1,3 +1,4 @@
+/*VARIAVEIS DE CORES*/
 :root{
     --color1: rgb(6, 55, 95);
     --color2: rgb(0, 183, 255);
@@ -6,6 +7,7 @@
     --color5: rgb(4, 6, 43);
 }
 
+/*CORPO DA PÁGINA*/
 *{
     margin: 0;
     padding: 0;
@@ -23,6 +25,7 @@ html, body {
     background-image: linear-gradient(to bottom, var(--color3), var(--color5));
 }
 
+/*CABEÇALHO*/
 header{
     font-family: Kanit;
     background-color: var(--color1);
@@ -128,6 +131,7 @@ nav ul li a:hover{
     color: #ffffff;
 }
 
+/*SLIDE SHOW*/
 #carrosel{
     margin-left: 22%;
     width: 1000px;
@@ -177,6 +181,8 @@ nav ul li a:hover{
     background-color: #717171;
 }
 
+
+/*RODAPÉ*/
 footer{
     background-color: #222;
     color: white;
