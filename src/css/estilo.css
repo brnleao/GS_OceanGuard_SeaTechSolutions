@@ -267,8 +267,40 @@ nav ul li a:hover{
 }
 
 /*OBJETIVOS*/
+#obj{
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 20px;
+    margin:90px;
+    border: 1.5px solid black;
+    border-radius: 10px;
+    height: 50%;
+    color: white;
+    font-family: Outfit;
+}
 
+#imgobj{
+    width: 650px;
+    height: 450px;
+    margin-top: 30px;
+}
 
+/*PÚBLICO-ALVO*/
+#pa{
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 20px;
+    margin:90px;
+    border: 1.5px solid black;
+    border-radius: 10px;
+    height: 50%;
+    color: white;
+    font-family: Outfit;
+}
+
+#imgpa{
+    width: 650px;
+    height: 450px;
+    margin-top: 30px;
+}
 
 /*RODAPÉ*/
 footer{
