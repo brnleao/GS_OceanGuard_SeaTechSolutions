@@ -332,6 +332,23 @@ nav ul li a:hover{
     margin-top: 30px;
 }
 
+/*FACILIDADES*/
+#fa{
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 20px;
+    margin:90px;
+    border: 1.5px solid black;
+    border-radius: 10px;
+    height: 50%;
+    color: white;
+    font-family: Outfit;
+}
+
+#imgfa{
+    width: 650px;
+    height: 450px;
+    margin-top: 30px;
+}
 
 /*RODAPÉ*/
 footer{
