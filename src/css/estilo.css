@@ -14,16 +14,13 @@
     box-sizing: border-box;
 }
 
-html, body {
+body {
     height: 100%;
     margin: 0;
     padding: 0;
-}
-
-.gradient-background{
-    height: 100%;
     background-image: linear-gradient(to bottom, var(--color3), var(--color5));
 }
+
 
 /*CABEÇALHO*/
 header{
@@ -136,6 +133,7 @@ nav ul li a:hover{
     margin-left: 22%;
     width: 1000px;
     height: 700px;
+    margin-top: 20px;
 }
 
 .prev, .next {
@@ -181,6 +179,74 @@ nav ul li a:hover{
     background-color: #717171;
 }
 
+.titulos{
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    font-family: Outfit;
+}
+
+#titulo-inicio{
+    margin-top: 40px;
+}
+
+/* SOLUÇÃO PROBLEMA */
+
+#sp{
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent background */
+    padding: 20px;
+    margin:90px;
+    border: 1.5px solid black;
+    border-radius: 10px;
+    height: 50%;
+    color: white;
+    font-family: Outfit;
+}
+
+.container{
+    line-height: 20px;
+    display: inline-block;
+}
+
+.container :first-child{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.titulos-secao{
+    padding: 15px;
+    font-size: 40px;
+}
+
+.container hr{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#h2sp{
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.container-content{
+    width: 56%;
+    font-size: 22px;
+    margin-top: -15px;
+    line-height: 30px;
+}
+
+#imgsp{
+    width: 650px;
+    height: 500px;
+}
+
+#imgsp-container{
+    width: 98%;
+    text-align: end;
+    margin-top: -30%;
+    margin-right: 30px;
+}
 
 /*RODAPÉ*/
 footer{
@@ -189,6 +255,7 @@ footer{
     font-size: 20px;
     text-align: center;
     height: 80px;
+    font-family: Outfit;
 }
 
 footer h5{

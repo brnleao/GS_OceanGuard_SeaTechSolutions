@@ -26,7 +26,7 @@
         <p id="subtitulo">by SeaTechSolutions</p>
         <nav>
             <ul>
-                <li><a href="#">Solução Problema</a></li>
+                <li><a href="#sp">Solução Problema</a></li>
                 <li><a href="#">Tecnologias</a></li>
                 <li><a href="#">Objetivos</a></li>
                 <li><a href="#">Público-Alvo</a></li>
@@ -38,24 +38,49 @@
     </header>
 
     <!--CONTEÚDO DA PÁGINA-->
-    <div class="gradient-background">
+    <!--SLIDE SHOW-->
+    <img id="carrosel" alt="Slide Show"/>
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
 
-        <!--SLIDE SHOW-->
-        <img id="carrosel"/>
-        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-        <a class="next" onclick="changeSlide(1)">&#10095;</a>
-
-        <div class="dot-container">
-            <span class="dot" onclick="currentSlide(0)"></span>
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-        </div>
-
-        <!--RODAPÉ-->
-        <footer>
-            <h5>@2024 SeaTechSolutions - Todos os direitos reservados</h5>
-        </footer>
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
     </div>
+
+    <p id="titulo-inicio" class="titulos">Ajude-nos a proteger o nosso bem mais precioso, OS OCEANOS!!!</p>
+
+    <section id="sp">
+        <div class="container">
+            <h2 class="titulos-secao">Solução Problema</h2>
+            <hr>
+            <h2 id="h2sp">O projeto "OceanGuard" ajuda a resolver problemas como:</h2>
+            <div class="container-content">
+                <br>
+                <p>
+                    <strong>- Falta de Informações Acessíveis:</strong> Dificuldade de acesso ás informações sobre os oceanos<br>
+                    <strong>- Resposta Lenta:</strong> A falta de agilidade e eficiência para combater problemas<br>
+                    <strong>- Poluição dos Oceanos:</strong> Plásticos e produtos químicos tóxicos estão contaminando os oceanos.<br>
+                    <strong>- Falta de Conscientização e Educação:</strong> Falta de educação e conscientização sobre a saúde dos mares.<br>
+                </p>
+                <br>
+                <br>
+                <p>Em resumo
+                    A plataforma "OceanGuard" resolve problemas críticos dos oceanos fornecendo dados em tempo real sobre qualidade da água, poluição e biodiversidade. Utiliza sensores avançados e satélites, permitindo respostas rápidas a crises ambientais.
+                    Promove práticas sustentáveis através de recursos educativos e alertas personalizados, enquanto facilita a colaboração entre governos, empresas e comunidades. "OceanGuard" capacita decisões informadas para proteger e preservar os ecossistemas marinhos.
+                </p>
+            </div>
+            <div id="imgsp-container">
+                <img id="imgsp" alt="Imagem Solução Problema" src="./src/assets/imgsp.jpg"/>
+            </div>
+        </div>
+    </section>
+
+    <!--RODAPÉ-->
+    <footer>
+        <h5>@2024 SeaTechSolutions - Todos os direitos reservados</h5>
+    </footer>
     <!--JS EXTERNO-->
     <script src="./src/js/script.js"></script>
 </body>
