@@ -2,7 +2,7 @@
 :root{
     --color1: rgb(6, 55, 95);
     --color2: rgb(0, 183, 255);
-    --color3: rgb(53, 180, 169);
+    --color3: rgb(51, 177, 170);
     --color4: rgb(22, 172, 199);
     --color5: rgb(4, 6, 43);
 }
@@ -193,7 +193,7 @@ nav ul li a:hover{
 /* SOLUÇÃO PROBLEMA */
 
 #sp{
-    background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent background */
+    background-color: rgba(0, 0, 0, 0.7); 
     padding: 20px;
     margin:90px;
     border: 1.5px solid black;
@@ -236,17 +236,39 @@ nav ul li a:hover{
     line-height: 30px;
 }
 
-#imgsp{
+.imgcard{
     width: 650px;
     height: 500px;
 }
 
-#imgsp-container{
+.imgcard-container{
     width: 98%;
     text-align: end;
     margin-top: -30%;
     margin-right: 30px;
 }
+
+/*Tecnologias*/
+#tec{
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 20px;
+    margin:90px;
+    border: 1.5px solid black;
+    border-radius: 10px;
+    height: 50%;
+    color: white;
+    font-family: Outfit;
+}
+
+#imgtec{
+    width: 650px;
+    height: 450px;
+    margin-top: 30px;
+}
+
+/*OBJETIVOS*/
+
+
 
 /*RODAPÉ*/
 footer{
