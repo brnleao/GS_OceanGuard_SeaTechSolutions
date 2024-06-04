@@ -1,5 +1,5 @@
 /*VARIAVEIS DE CORES*/
-:root{
+:root {
     --color1: rgb(6, 55, 95);
     --color2: rgb(0, 183, 255);
     --color3: rgb(51, 177, 170);
@@ -8,7 +8,7 @@
 }
 
 /*CORPO DA PÁGINA*/
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -22,9 +22,8 @@ body {
     display: flexbox;
 }
 
-
 /*CABEÇALHO*/
-header{
+header {
     font-family: Kanit;
     background-color: var(--color1);
     color: white;
@@ -36,7 +35,7 @@ header{
     z-index: 1000;
 }
 
-#imgLogo{
+#imgLogo {
     width: 100px;
     height: 100px;
     margin: 20px;
@@ -45,12 +44,12 @@ header{
     display: flexbox;
 }
 
-header p{
+header p {
     font-size: 20px;
     width: 200px;
 }
 
-#titulo{
+#titulo {
     font-size: 35px;
     padding: 5px;
     margin-top: -120px;
@@ -58,7 +57,7 @@ header p{
     transition: all 0.4s ease-in-out;
 }
 
-#subtitulo{
+#subtitulo {
     margin-top: -15px;
     text-align: start;
     margin-right: 50px;
@@ -67,41 +66,43 @@ header p{
     transition: all 0.4s ease-in-out;
 }
 
-nav{
-    width: 55%;
+nav {
+    width: 65%;
     margin-left: 450px;
     margin-top: -90px;
     display: inline-flex;
 }
 
-nav ul{
+nav ul {
     list-style: none;
     font-size: 1.3rem;
-    text-align: center;
+    text-align: start;
     margin-top: 80px;
+    width: 100%;
 }
 
-nav ul li{
+nav ul li {
     display: inline-block;
+    margin-right: 5px;
 }
 
-nav ul li a{
+nav ul li a {
     color: white;
     text-decoration: none;
     padding: 20px;
     padding-bottom: 5px;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
     color: aqua;
     border-bottom: 2px solid aqua;
 }
 
-#loginBtn{
-    margin-left: -20px;
+#loginBtn {
+    margin-left: -13.5%;
 }
 
-.botao{
+.botao {
     background-color: var(--color2);
     padding: 5px;
     border: 3px solid black;
@@ -136,40 +137,35 @@ nav ul li a:hover{
 }
 
 #welcome-message{
-    font-size: 17px;
-    width: auto;
-    max-width: 240px;
-    height: 60px;
-    padding: 2px;
-    display: none;
-    margin-left: 1620px;
-    margin-top: -30px;
+    font-size: 18px;
+    width: 100%;
+    text-align: end;
+    margin-top: -25px;
+    margin-left: -1%;
 }
 
-/* Estilos para a janela modal */
+/* MODAL */
 .modal1 {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.6); /* Fundo semitransparente */
+    background-color: rgba(0, 0, 0, 0.8);
     padding-top: 60px;
 }
 
 .modal-content1 {
-    background-color: #ffffff;
+    background-color: #fefefe;
     margin: 5% auto;
     padding: 20px;
-    border: 1px solid #004d40;
-    border-radius: 10px;
+    border: 1px solid #888;
     width: 80%;
-    max-width: 400px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: left;
+    max-width: 500px;
+    border-radius: 10px;
     position: relative;
 }
 
@@ -223,8 +219,12 @@ button[type="submit"]:hover {
 }
 
 /* SLIDE SHOW */
+.slideshow-container{
+    width: 100%;
+    text-align: center;
+}
+
 #carrosel {
-    margin-left: 22%;
     width: 1000px;
     height: 700px;
     margin-top: 20px;
@@ -232,29 +232,6 @@ button[type="submit"]:hover {
     border-radius: 15px;
     transition: opacity 1s ease-in-out; /* Transição suave */
     opacity: 0; /* Inicialmente invisível */
-}
-
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    user-select: none;
-}
-
-.prev {
-    left: 0;
-    margin-left: 23.05rem;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
 }
 
 .dot-container {
@@ -303,12 +280,14 @@ button[type="submit"]:hover {
     height: 50%;
     color: white;
     font-family: Outfit;
+    height: 30%;
 }
 
 .card{
     transition: transform 0.3s ease;
     border: 1px solid #ccc;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: auto;
 }
 
 .card:hover {
@@ -343,21 +322,23 @@ button[type="submit"]:hover {
 
 .container-content{
     width: 56%;
-    font-size: 22px;
+    font-size: 150%;
     margin-top: -15px;
     line-height: 30px;
+    height: 650px;
+    display: inline-block;
 }
 
 .imgcard{
-    width: 650px;
-    height: 500px;
+    width: 36%;
+    height: 30%;
 }
 
 .imgcard-container{
-    width: 98%;
+    width: auto;
     text-align: end;
-    margin-top: -30%;
-    margin-right: 30px;
+    margin-top: -20%;
+    margin-right: 20px;
 }
 
 /*Tecnologias*/
@@ -372,11 +353,6 @@ button[type="submit"]:hover {
     font-family: Outfit;
 }
 
-#imgtec{
-    width: 650px;
-    height: 450px;
-    margin-top: 30px;
-}
 
 /*OBJETIVOS*/
 #obj{
@@ -388,12 +364,6 @@ button[type="submit"]:hover {
     height: 50%;
     color: white;
     font-family: Outfit;
-}
-
-#imgobj{
-    width: 650px;
-    height: 450px;
-    margin-top: 30px;
 }
 
 /*PÚBLICO-ALVO*/
@@ -408,12 +378,6 @@ button[type="submit"]:hover {
     font-family: Outfit;
 }
 
-#imgpa{
-    width: 650px;
-    height: 450px;
-    margin-top: 30px;
-}
-
 /*BENEFICIOS*/
 #be{
     background-color: rgba(0, 0, 0, 0.7); 
@@ -424,12 +388,6 @@ button[type="submit"]:hover {
     height: 50%;
     color: white;
     font-family: Outfit;
-}
-
-#imgbe{
-    width: 650px;
-    height: 450px;
-    margin-top: 30px;
 }
 
 /*FACILIDADES*/
@@ -444,12 +402,6 @@ button[type="submit"]:hover {
     font-family: Outfit;
 }
 
-#imgfa{
-    width: 650px;
-    height: 450px;
-    margin-top: 30px;
-}
-
 /*RODAPÉ*/
 footer{
     background-color: #222;
@@ -462,4 +414,183 @@ footer{
 
 footer h5{
     padding: 30px;
+}
+
+@media (max-width: 1000px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        text-align: center;
+        width: 100%;
+        height: 630px;
+    }
+
+    #imgLogo {
+        margin: 20px auto;
+    }
+
+    #titulo, #subtitulo {
+        margin: 5px 0;
+        margin-top: -20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    #subtitulo{
+        margin-bottom: 50px;
+    }
+
+    nav {
+        width: 100%;
+        margin-left: 0%;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    nav ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        padding: 15px;
+    }
+
+    nav ul li a:hover{
+        border-bottom: none;
+        font-weight: 800;
+    }
+
+    #loginBtn{
+        margin-left: 0.5%;
+    }
+
+    #welcome-message {
+        margin-left: 0;
+        margin-top: 30px;
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    #slideshow-container{
+        width: 90%;
+        margin: 10px;
+    }
+
+    #carrosel {
+        width: 90%;
+        margin: 40px;
+        height: 500px;
+    }
+
+    .card{
+        height: auto;
+    }
+
+    .container-content, .imgcard-container {
+        width: 100%;
+        margin: 0;
+        margin-top: 5%;
+    }
+
+    .container-content {
+        font-size: 16px;
+        margin-bottom: auto;
+    }
+
+    .imgcard {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+}
+
+@media (max-width: 1300px) {
+    #slideshow-container{
+        width: 70%;
+        margin: 10px;
+    }
+
+    #carrosel {
+        width: 70%;
+        margin: 40px;
+        height: 500px;
+    }
+
+    #welcome-message {
+        
+    }
+
+    .container-content, .imgcard-container {
+        width: 90%;
+        margin: 0;
+    }
+
+    .container-content {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .imgcard {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 1935px) {
+    #slideshow-container{
+        width: 70%;
+        margin: 10px;
+    }
+
+    #carrosel {
+        width: 70%;
+        margin: 40px;
+        height: 500px;
+    }
+
+    #welcome-message {
+        
+    }
+
+    .container-content, .imgcard-container {
+        width: 90%;
+        margin: 0;
+    }
+
+    .container-content {
+        font-size: 120%;
+        margin-bottom: 10px;
+        height: auto;
+    }
+
+    .imgcard {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        max-width: 800px;
+        max-height: 600px;
+    }
+
+    .imgcard-container{
+        width: 90%;
+        text-align: center;
+        margin: 2%;
+        margin-left: 4%;
+    }
 }
