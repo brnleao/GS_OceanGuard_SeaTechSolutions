@@ -70,7 +70,7 @@ function slideShow() {
 
     }, 800); // Tempo da transição entre imagens
 
-    setTimeout(slideShow, time); // Muda a imagem a cada 4 segundos
+    setTimeout(slideShow, time); // Muda a imagem a cada 3 segundos
 }
 
 function changeSlide(n) {
