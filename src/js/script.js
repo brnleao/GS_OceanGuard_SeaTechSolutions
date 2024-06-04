@@ -4,21 +4,73 @@ let index = 0;
 let time = 3000;
 
 // Funções
+
+function login(){
+    document.addEventListener('DOMContentLoaded', () => {
+        const loginBtn = document.getElementById('loginBtn');
+        const modal = document.getElementById('loginModal');
+        const closeBtn = document.querySelector('.closeBtn');
+        const loginForm = document.getElementById('loginForm');
+        const welcomeMessage = document.getElementById('welcome-message');
+    
+        // Abrir a janela modal ao clicar no botão de login
+        loginBtn.addEventListener('click', () => {
+            modal.style.display = 'block';
+        });
+    
+        // Fechar a janela modal ao clicar no botão de fechar
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+    
+        // Fechar a janela modal ao clicar fora da área do conteúdo
+        window.addEventListener('click', (event) => {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+    
+        // Verificar os campos de login ao enviar o formulário
+        loginForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // Impede o envio do formulário
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+    
+            welcomeMessage.textContent = `Bem-vindo, ${username}!`;
+            welcomeMessage.style.display = 'block';
+            modal.style.display = 'none'; // Fecha a janela modal
+            loginForm.reset();
+        });
+    });
+}
+
+
 function slideShow() {
     const carousel = document.getElementById("carrosel");
     const dots = document.getElementsByClassName("dot");
 
-    carousel.src = images[index];
-    for (let i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    dots[index].className += " active";
+    // Remover classe fade-in para iniciar transição de fade-out
+    carousel.classList.remove("fade-in");
 
-    index++;
-    if (index == images.length) {
-        index = 0;
-    }
-    setTimeout(slideShow, time);
+    setTimeout(() => {
+        carousel.src = images[index];
+        
+        // Adicionar classe fade-in para iniciar transição de fade-in
+        carousel.classList.add("fade-in");
+
+        for (let i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        dots[index].className += " active";
+
+        index++;
+        if (index == images.length) {
+            index = 0;
+        }
+
+    }, 800); // Tempo da transição entre imagens
+
+    setTimeout(slideShow, time); // Muda a imagem a cada 4 segundos
 }
 
 function changeSlide(n) {
@@ -64,3 +116,4 @@ slideShow();
 
 smoothScroll();
 
+login();

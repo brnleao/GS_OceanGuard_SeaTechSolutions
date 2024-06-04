@@ -34,14 +34,31 @@
                 <li><a href="#fa">Facilidades</a></li>
             </ul>
         </nav>
-        <a id="login" class="botao section-btn" href="#" data-toggle="modal" data-target="#modal1">Login</a>
+        <a id="loginBtn" class="botao section-btn" href="#" data-toggle="modal" data-target="#modal1">Login</a>
+        <h1 id="welcome-message">Bem-vindo</h1>
     </header>
+
+    <!-- Janela Modal -->
+    <div id="loginModal" class="modal1">
+        <div class="modal-content1">
+            <span class="closeBtn">&times;</span>
+            <form id="loginForm">
+                <label for="username">Usuário:</label>
+                <input maxlength="20" type="text" id="username" name="username" required>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </div>
 
     <!--CONTEÚDO DA PÁGINA-->
     <!--SLIDE SHOW-->
-    <img id="carrosel" alt="Slide Show"/>
-    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    <div class="slideshow-container">
+        <img id="carrosel" alt="Slide Show" class="fade"/>
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
 
     <div class="dot-container">
         <span class="dot" onclick="currentSlide(0)"></span>
