@@ -19,7 +19,8 @@ body {
     margin: 0;
     padding: 0;
     background-image: linear-gradient(to bottom, var(--color3), var(--color5));
-    display: flexbox;
+    display: flex;
+    flex-direction: column;
 }
 
 /*CABEÇALHO*/
@@ -27,21 +28,21 @@ header {
     font-family: Kanit;
     background-color: var(--color1);
     color: white;
-    display: flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
     width: 100%;
-    height: 170px;
     top: 0;
     left: 0;
     z-index: 1000;
+    flex-wrap: wrap;
 }
 
 #imgLogo {
     width: 100px;
     height: 100px;
-    margin: 20px;
-    margin-left: 50px;
     transition: all 0.4s ease-in-out;
-    display: flexbox;
 }
 
 header p {
@@ -52,38 +53,37 @@ header p {
 #titulo {
     font-size: 35px;
     padding: 5px;
-    margin-top: -120px;
-    margin-left: 190px;
+    margin-left: 20px;
     transition: all 0.4s ease-in-out;
 }
 
 #subtitulo {
-    margin-top: -15px;
     text-align: start;
-    margin-right: 50px;
-    margin-left: 230px;
-    width: 200px;
+    margin-left: 20px;
     transition: all 0.4s ease-in-out;
 }
 
 nav {
-    width: 65%;
-    margin-left: 450px;
-    margin-top: -90px;
-    display: inline-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: auto;
 }
 
 nav ul {
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
     font-size: 1.3rem;
     text-align: start;
-    margin-top: 80px;
-    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
     display: inline-block;
-    margin-right: 5px;
+    margin-right: 15px;
 }
 
 nav ul li a {
@@ -99,7 +99,8 @@ nav ul li a:hover {
 }
 
 #loginBtn {
-    margin-left: -13.5%;
+    margin-left: 15px;
+    margin-top: 0px;
 }
 
 .botao {
@@ -136,12 +137,12 @@ nav ul li a:hover {
     color: #ffffff;
 }
 
-#welcome-message{
+#welcome-message {
     font-size: 18px;
     width: 100%;
     text-align: end;
-    margin-top: -25px;
-    margin-left: -1%;
+    margin-top: 0px;
+    display: none;
 }
 
 /* MODAL */
@@ -219,7 +220,7 @@ button[type="submit"]:hover {
 }
 
 /* SLIDE SHOW */
-.slideshow-container{
+.slideshow-container {
     width: 100%;
     text-align: center;
 }
@@ -258,94 +259,89 @@ button[type="submit"]:hover {
     opacity: 1 !important; /* Visível */
 }
 
-.titulos{
+.titulos {
     color: white;
     font-size: 40px;
     text-align: center;
     font-family: Outfit;
 }
 
-#titulo-inicio{
+#titulo-inicio {
     margin-top: 40px;
 }
 
 /* SOLUÇÃO PROBLEMA */
 
-#sp{
+#sp {
     background-color: rgba(0, 0, 0, 0.7); 
     padding: 20px;
-    margin:90px;
+    margin: 90px;
     border: 1.5px solid black;
     border-radius: 10px;
-    height: 50%;
+    height: 30%;
     color: white;
     font-family: Outfit;
-    height: 30%;
 }
 
-.card{
+.card {
     transition: transform 0.3s ease;
     border: 1px solid #ccc;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    height: auto;
+    padding: 10px;
+    text-align: start;
+    background-color: #fff;
+    width: auto;
+    display: flex;
 }
 
 .card:hover {
     transform: scale(1.02);
 }
 
-.container{
-    line-height: 20px;
-    display: inline-block;
+.container {
+    line-height: 15px;
 }
 
-.container :first-child{
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.titulos-secao{
+.titulos-secao {
     padding: 15px;
     font-size: 40px;
-}
-
-.container hr{
-    width: 100%;
     text-align: center;
     margin-bottom: 20px;
 }
 
-#h2sp{
-    margin-top: 60px;
-    margin-bottom: 40px;
+.container hr {
+    width: 100%;
+    text-align: center;
 }
 
-.container-content{
-    width: 56%;
-    font-size: 150%;
-    margin-top: -15px;
+#h2sp {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.container-content {
+    width: 55%;
+    font-size: 130%;
     line-height: 30px;
-    height: 650px;
+    margin-bottom: 30px;
     display: inline-block;
 }
 
-.imgcard{
-    width: 36%;
-    height: 30%;
+.imgcard-container {
+    width: 30%;
+    margin-left: 4%;
+    display: inline-block;
 }
 
-.imgcard-container{
-    width: auto;
-    text-align: end;
-    margin-top: -20%;
-    margin-right: 20px;
+.imgcard {
+    width: 100%;
 }
 
 /*Tecnologias*/
-#tec{
+#tec {
     background-color: rgba(0, 0, 0, 0.7); 
     padding: 20px;
-    margin:90px;
+    margin: 90px;
     border: 1.5px solid black;
     border-radius: 10px;
     height: 50%;
@@ -353,12 +349,11 @@ button[type="submit"]:hover {
     font-family: Outfit;
 }
 
-
 /*OBJETIVOS*/
-#obj{
+#obj {
     background-color: rgba(0, 0, 0, 0.7); 
     padding: 20px;
-    margin:90px;
+    margin: 90px;
     border: 1.5px solid black;
     border-radius: 10px;
     height: 50%;
@@ -367,10 +362,10 @@ button[type="submit"]:hover {
 }
 
 /*PÚBLICO-ALVO*/
-#pa{
+#pa {
     background-color: rgba(0, 0, 0, 0.7); 
     padding: 20px;
-    margin:90px;
+    margin: 90px;
     border: 1.5px solid black;
     border-radius: 10px;
     height: 50%;
@@ -379,10 +374,10 @@ button[type="submit"]:hover {
 }
 
 /*BENEFICIOS*/
-#be{
+#be {
     background-color: rgba(0, 0, 0, 0.7); 
     padding: 20px;
-    margin:90px;
+    margin: 90px;
     border: 1.5px solid black;
     border-radius: 10px;
     height: 50%;
@@ -391,10 +386,10 @@ button[type="submit"]:hover {
 }
 
 /*FACILIDADES*/
-#fa{
+#fa {
     background-color: rgba(0, 0, 0, 0.7); 
     padding: 20px;
-    margin:90px;
+    margin: 90px;
     border: 1.5px solid black;
     border-radius: 10px;
     height: 50%;
@@ -403,7 +398,7 @@ button[type="submit"]:hover {
 }
 
 /*RODAPÉ*/
-footer{
+footer {
     background-color: #222;
     color: white;
     font-size: 20px;
@@ -412,7 +407,7 @@ footer{
     font-family: Outfit;
 }
 
-footer h5{
+footer h5 {
     padding: 30px;
 }
 
@@ -422,175 +417,92 @@ footer h5{
         align-items: center;
         height: auto;
         text-align: center;
-        width: 100%;
-        height: 630px;
+        padding: 20px;
     }
 
     #imgLogo {
-        margin: 20px auto;
+        margin: 20px 0;
     }
 
     #titulo, #subtitulo {
-        margin: 5px 0;
-        margin-top: -20px;
-        width: 100%;
+        margin: 0;
         text-align: center;
     }
 
-    #subtitulo{
-        margin-bottom: 50px;
+    #subtitulo {
+        margin-bottom: 60px;
     }
 
     nav {
         width: 100%;
-        margin-left: 0%;
-        flex-direction: column;
-        text-align: center;
-        margin-bottom: 30px;
+        justify-content: center;
+        margin-bottom: 20px;
     }
 
     nav ul {
-        margin: 0;
-        padding: 0;
         display: flex;
         flex-direction: column;
-        width: 100%;
         text-align: center;
+        width: 100%;
     }
 
     nav ul li {
-        display: block;
         width: 100%;
-        margin-bottom: 10px;
+        margin: 5px 0;
     }
 
     nav ul li a {
-        padding: 15px;
-    }
-
-    nav ul li a:hover{
-        border-bottom: none;
-        font-weight: 800;
-    }
-
-    #loginBtn{
-        margin-left: 0.5%;
-    }
-
-    #welcome-message {
-        margin-left: 0;
-        margin-top: 30px;
-        display: none;
+        padding: 10px;
         width: 100%;
         text-align: center;
     }
 
-    #slideshow-container{
-        width: 90%;
-        margin: 10px;
-    }
-
-    #carrosel {
-        width: 90%;
-        margin: 40px;
-        height: 500px;
-    }
-
-    .card{
-        height: auto;
-    }
-
-    .container-content, .imgcard-container {
-        width: 100%;
-        margin: 0;
-        margin-top: 5%;
-    }
-
-    .container-content {
-        font-size: 16px;
-        margin-bottom: auto;
-    }
-
-    .imgcard {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-    }
-
-}
-
-@media (max-width: 1300px) {
-    #slideshow-container{
-        width: 70%;
-        margin: 10px;
-    }
-
-    #carrosel {
-        width: 70%;
-        margin: 40px;
-        height: 500px;
-    }
-
-    #welcome-message {
-        
-    }
-
-    .container-content, .imgcard-container {
-        width: 90%;
-        margin: 0;
-    }
-
-    .container-content {
-        font-size: 16px;
-        margin-bottom: 10px;
-    }
-
-    .imgcard {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-    }
-}
-
-@media (max-width: 1935px) {
-    #slideshow-container{
-        width: 70%;
-        margin: 10px;
-    }
-
-    #carrosel {
-        width: 70%;
-        margin: 40px;
-        height: 500px;
-    }
-
-    #welcome-message {
-        
-    }
-
-    .container-content, .imgcard-container {
-        width: 90%;
-        margin: 0;
-    }
-
-    .container-content {
-        font-size: 120%;
-        margin-bottom: 10px;
-        height: auto;
-    }
-
-    .imgcard {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        max-width: 800px;
-        max-height: 600px;
-    }
-
-    .imgcard-container{
-        width: 90%;
+    #loginBtn {
+        margin: 20px 0;
         text-align: center;
-        margin: 2%;
-        margin-left: 4%;
+    }
+
+    #welcome-message {
+        display: block;
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .container-content {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .imgcard-container {
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .imgcard {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 1800px) {
+    .container-content {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .imgcard-container {
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .imgcard {
+        width: 50%;
+        height: auto;
+        margin-top: 20px;
+        text-align: center;
     }
 }
